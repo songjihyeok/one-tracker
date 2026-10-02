@@ -1,0 +1,14 @@
+{
+  "name": "Natural Earth 1:10m land",
+  "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ace5fed0eaf3c6c03c951e75b439ba8fffbc218e/geojson/ne_10m_land.geojson",
+  "revision": "ace5fed0eaf3c6c03c951e75b439ba8fffbc218e",
+  "sourceSha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416",
+  "fixtureSha256": "b5d15bdc1fcab0d4e511b0ebcfb6ce59d2ea6bf5369c45e8e0479d5bfadb703c",
+  "license": "Public domain",
+  "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "descriptionUrl": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+  "transform": "Global land polygons intersected with 5-degree cells using Shapely. No coastline simplification, smoothing, or vertex rounding. Gzip mtime=0.",
+  "gridDegrees": 5,
+  "sourcePolygons": 6837,
+  "landCells": 1452
+}

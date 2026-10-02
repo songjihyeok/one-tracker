@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dist-server/
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+.DS_Store
+.omc/
+*.cpuprofile
+.wrangler/
+.dev.vars
+.dev.vars.*

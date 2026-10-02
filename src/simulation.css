@@ -1,0 +1,1435 @@
+.view-navigation .nav-link {
+  padding: 0;
+  background: none;
+  border: 0;
+}
+.simulation-main {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0 30px 25px;
+}
+.simulation-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 25px 3px 24px;
+}
+.simulation-kicker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #84929e;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.simulation-kicker > svg {
+  color: #b3257b;
+}
+.simulation-kicker > span {
+  margin-left: 11px;
+  color: #b0b7bd;
+  font-size: 10px;
+}
+.simulation-heading h1 {
+  margin-top: 8px;
+  font-size: 30px;
+}
+.simulation-heading h1 > span {
+  color: #82919f;
+}
+.simulation-heading p {
+  margin-top: 6px;
+  color: #8996a1;
+  font-size: 11px;
+}
+.simulation-disclosure {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.simulation-disclosure > span:last-child {
+  font-size: 10px;
+  color: #96a0aa;
+}
+.simulation-mode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  background: #fcf0f7;
+  border: 1px solid #efd8e7;
+  border-radius: 5px;
+  color: #af3c80;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1px;
+}
+.simulation-mode-badge > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #bc0c76;
+  box-shadow: 0 0 0 3px #c7097810;
+}
+.simulation-viewport {
+  position: relative;
+  min-height: 690px;
+  height: 76vh;
+  max-height: 950px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid #182e40;
+  border-radius: 13px;
+  background: #0b202f;
+  box-shadow: 0 10px 30px #172c3d10;
+  color: #e6edf1;
+}
+.simulation-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.simulation-scene > div {
+  height: 100%;
+}
+.glass-panel {
+  background: #0a1b29e8;
+  border: 1px solid #ffffff19;
+  box-shadow: 0 8px 25px #00000014;
+  border-radius: 9px;
+  backdrop-filter: blur(14px);
+}
+.simulation-fleet {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 246px;
+  z-index: 3;
+  overflow: hidden;
+}
+.sim-panel-heading {
+  padding: 17px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff0d;
+}
+.sim-panel-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sim-panel-heading svg {
+  color: #b5c4ce;
+}
+.sim-panel-heading h2 {
+  color: #e4ecf2;
+  font-size: 12px;
+  font-weight: 600;
+}
+.sim-panel-heading > span {
+  color: #8496a5;
+  font-size: 10px;
+  letter-spacing: 0.75px;
+}
+.simulation-fleet-list {
+  padding: 7px;
+}
+.simulation-fleet-item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 13px 9px 13px 8px;
+  background: transparent;
+  text-align: left;
+  color: #b3c0cb;
+}
+.simulation-fleet-item + .simulation-fleet-item {
+  margin-top: 4px;
+}
+.simulation-fleet-item:hover {
+  background: #ffffff06;
+  border-color: #ffffff12;
+}
+.simulation-fleet-item.is-selected {
+  background: #b70b791a;
+  border-color: #c33a8f50;
+}
+.simulation-fleet-item.is-selected::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: -8px;
+  width: 2px;
+  background: #e72c9d;
+  border-radius: 2px;
+}
+.sim-fleet-index {
+  font-size: 10px;
+  color: #6c8395;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+.is-selected .sim-fleet-index {
+  color: #dd58ac;
+}
+.sim-fleet-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.sim-fleet-detail > strong {
+  color: #dce7ee;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+.is-selected .sim-fleet-detail > strong {
+  color: #fff;
+}
+.sim-fleet-detail > span:not(.sim-fleet-progress) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7f95a7;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.sim-fleet-detail i {
+  width: 2px;
+  height: 2px;
+  background: #748998;
+  border-radius: 50%;
+}
+.sim-fleet-progress {
+  height: 2px;
+  margin-top: 10px;
+  width: 100%;
+  background: #ffffff0a;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sim-fleet-progress > span {
+  display: block;
+  height: 100%;
+  background: #4c7189;
+}
+.is-selected .sim-fleet-progress > span {
+  background: #de349b;
+}
+.sim-fleet-percent {
+  font-family: "Manrope", sans-serif;
+  color: #94a8b9;
+  font-size: 13px;
+  letter-spacing: -0.4px;
+  align-self: flex-start;
+  margin-top: 1px;
+}
+.sim-fleet-percent small {
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  margin-left: 1px;
+}
+.sim-fleet-footer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 16px;
+  border-top: 1px solid #ffffff0a;
+  color: #718a9e;
+  font-size: 10px;
+}
+.sim-fleet-footer > svg {
+  color: #8ba0af;
+}
+.sim-fleet-footer > .sim-play-indicator {
+  margin-left: auto;
+}
+.sim-play-indicator {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #7891a4;
+  border-radius: 50%;
+}
+.sim-play-indicator.is-playing {
+  background: #64bca5;
+  box-shadow: 0 0 0 3px #67c3aa13;
+}
+.simulation-camera-controls {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 4px;
+  display: flex;
+  gap: 3px;
+  border-radius: 7px;
+  background: #091927db;
+  border: 1px solid #ffffff1c;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 2px 14px #00000017;
+}
+.simulation-camera-controls > button {
+  border: 1px solid transparent;
+  background: none;
+  color: #90a6b7;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  font-size: 10px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+.simulation-camera-controls > button:hover {
+  color: #e2edf4;
+  background: #ffffff08;
+}
+.simulation-camera-controls > button[aria-pressed="true"] {
+  color: #f0d0e5;
+  background: #b4237d28;
+  border-color: #cd3b9138;
+}
+.simulation-camera-controls svg {
+  stroke-width: 1.6;
+}
+.simulation-instruments {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 261px;
+  padding: 18px;
+  z-index: 3;
+}
+.sim-instrument-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.sim-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: #7a91a4;
+  font-weight: 550;
+}
+.sim-synthetic-label {
+  font-size: 10px;
+  color: #bd76a4;
+  background: #bd4b9220;
+  border-radius: 3px;
+  padding: 2px 4px;
+  letter-spacing: 0.3px;
+}
+.simulation-instruments > h2 {
+  font-family: "Manrope", sans-serif;
+  color: #f1f5f8;
+  font-size: 17px;
+  letter-spacing: -0.15px;
+  line-height: 1.4;
+  margin-top: 14px;
+  font-weight: 750;
+}
+.sim-vessel-subtitle {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 7px;
+  font-size: 10px;
+  color: #718b9e;
+}
+.sim-vessel-subtitle > span {
+  margin-left: auto;
+  color: #7f94a4;
+  font-size: 10px;
+}
+.sim-main-instruments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #ffffff0b;
+  border-bottom: 1px solid #ffffff0b;
+  padding: 18px 0 13px;
+  margin-top: 18px;
+}
+.sim-main-instruments > div + div {
+  border-left: 1px solid #ffffff0b;
+  padding-left: 19px;
+}
+.sim-main-instruments strong {
+  display: block;
+  color: #eff5fa;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+}
+.sim-main-instruments strong small {
+  color: #6f899e;
+  font-size: 11px;
+  margin-left: 4px;
+}
+.sim-position {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 13px;
+  color: #8ba0b0;
+}
+.sim-position > svg {
+  color: #c94b98;
+}
+.sim-position > span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.sim-position i {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #6c8599;
+}
+.sim-next-stop {
+  margin-top: 21px;
+}
+.sim-next-stop > strong {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #dce7ef;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.sim-next-stop > strong > svg:first-child {
+  color: #bd77a6;
+  stroke-width: 1.5;
+}
+.sim-next-stop > strong > svg:last-child {
+  margin-left: auto;
+  color: #879ead;
+}
+.sim-next-stop > span:last-child {
+  display: block;
+  font-size: 10px;
+  color: #718b9f;
+  margin-top: 7px;
+  margin-left: 23px;
+}
+.sim-voyage-progress {
+  border-top: 1px solid #ffffff0b;
+  margin-top: 19px;
+  padding-top: 16px;
+}
+.sim-voyage-progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sim-voyage-progress strong {
+  color: #c698b5;
+  font-weight: 500;
+  font-size: 12px;
+}
+.sim-progress-track {
+  height: 3px;
+  margin-top: 10px;
+  width: 100%;
+  background: #ffffff0d;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sim-progress-track > span {
+  height: 100%;
+  display: block;
+  background: #c82389;
+}
+.sim-voyage-progress > span:last-child {
+  font-size: 10px;
+  color: #688397;
+  display: block;
+  margin-top: 7px;
+}
+.simulation-scene-caption {
+  position: absolute;
+  bottom: 144px;
+  left: 26px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  pointer-events: none;
+  text-shadow: 0 1px 3px #0009;
+}
+.simulation-scene-caption > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: #c4d8e3;
+  font-weight: 550;
+}
+.simulation-scene-caption > span:last-child {
+  color: #7d9aaf;
+  font-size: 10px;
+}
+.simulation-routes-toggle {
+  position: absolute;
+  bottom: 144px;
+  right: 24px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #b6c7d1;
+  font-size: 10px;
+  padding: 10px 12px;
+  background: #0b1d2ddb;
+  border: 1px solid #ffffff20;
+  border-radius: 6px;
+  backdrop-filter: blur(12px);
+}
+.simulation-routes-toggle[aria-pressed="true"] {
+  color: #e3cadd;
+  border-color: #b64c944a;
+}
+.sim-toggle-dot {
+  width: 5px;
+  height: 5px;
+  background: #6c8191;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+.simulation-routes-toggle[aria-pressed="true"] .sim-toggle-dot {
+  background: #d52792;
+}
+.simulation-playback {
+  position: absolute;
+  bottom: 35px;
+  left: 22px;
+  right: 22px;
+  min-height: 87px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 18px 21px;
+  background: #091926ed;
+}
+.sim-playback-buttons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.sim-play-button {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 6px;
+  border: 1px solid #d5429890;
+  color: #fff;
+  background: #b90f76;
+  box-shadow: 0 2px 8px #c4147d19;
+}
+.sim-play-button:hover {
+  background: #d41589;
+}
+.sim-play-button svg {
+  stroke-width: 1;
+}
+.sim-restart-button {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 34px;
+  border: 0;
+  color: #8098ac;
+  background: transparent;
+  border-radius: 5px;
+}
+.sim-restart-button:hover {
+  background: #ffffff09;
+  color: #e2edf5;
+}
+.sim-timeline {
+  flex: 1;
+  min-width: 0;
+}
+.sim-timeline > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+.sim-timeline .sim-label {
+  color: #a8bac8;
+  letter-spacing: 0.8px;
+}
+.sim-timeline .sim-label > span {
+  color: #56778e;
+  font-size: 10px;
+  letter-spacing: 0;
+  margin-left: 7px;
+}
+.sim-timeline > div > span:last-child {
+  color: #b8cad7;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.sim-timeline > div > span:last-child > span {
+  color: #567388;
+}
+.sim-timeline input[type="range"] {
+  width: 100%;
+  display: block;
+  height: 4px;
+  margin: 0;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    #c22187 0%,
+    #c22187 var(--timeline-progress),
+    #294153 var(--timeline-progress),
+    #294153 100%
+  );
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.sim-timeline input[type="range"]::-webkit-slider-thumb {
+  width: 9px;
+  height: 9px;
+  appearance: none;
+  border: 2px solid #e1b4cf;
+  border-radius: 50%;
+  background: #c01881;
+  box-shadow: 0 0 0 3px #c3198130;
+}
+.sim-timeline input[type="range"]::-moz-range-thumb {
+  width: 7px;
+  height: 7px;
+  border: 2px solid #e1b4cf;
+  border-radius: 50%;
+  background: #c01881;
+}
+.sim-timeline input:focus-visible {
+  outline: 2px solid #b9619a;
+  outline-offset: 7px;
+}
+.sim-speed-selector {
+  border-left: 1px solid #ffffff12;
+  padding-left: 21px;
+  min-width: 104px;
+}
+.sim-speed-selector > label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: #6d879c;
+  letter-spacing: 0.8px;
+}
+.sim-speed-selector > div {
+  position: relative;
+  margin-top: 5px;
+}
+.sim-speed-selector select {
+  appearance: none;
+  border: 0;
+  background: none;
+  color: #d0dde6;
+  width: 100%;
+  font-size: 12px;
+  padding: 0 19px 0 0;
+  cursor: pointer;
+}
+.sim-speed-selector select option {
+  background: #112b3e;
+  color: white;
+}
+.sim-speed-selector > div > svg {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  color: #899faf;
+  pointer-events: none;
+}
+.simulation-itinerary {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 24px 3px 23px;
+  border-bottom: 1px solid #e4e9ed;
+}
+.sim-itinerary-intro {
+  flex-shrink: 0;
+  min-width: 240px;
+}
+.sim-itinerary-intro > .sim-label {
+  font-size: 10px;
+  color: #9aa5ae;
+}
+.sim-itinerary-intro h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 750;
+  color: #425868;
+  margin-top: 5px;
+}
+.sim-itinerary-intro h2 > span {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: #a1abb4;
+  font-size: 10px;
+  margin-left: 6px;
+}
+.sim-itinerary-intro p {
+  font-size: 10px;
+  color: #939faa;
+  margin-top: 5px;
+}
+.sim-port-stops {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  min-width: 0;
+  gap: 15px;
+}
+.sim-port-stops::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  top: 9px;
+  left: 13%;
+  right: 13%;
+  background: #dfe5e9;
+}
+.sim-port-stop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 85px;
+  text-align: center;
+}
+.sim-port-node {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #dbe3e9;
+  background: #f7f8fa;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #9eabb7;
+}
+.sim-port-stop.is-reached .sim-port-node {
+  color: #819f97;
+  background: #eff5f3;
+  border-color: #d4e3dc;
+}
+.sim-port-stop.is-next .sim-port-node {
+  border-color: #e8bfd8;
+  color: #c11480;
+  background: #fbeef6;
+  box-shadow: 0 0 0 3px #f7f8fa;
+}
+.sim-port-stop strong {
+  font-size: 11px;
+  font-weight: 550;
+  color: #6b7e8d;
+  margin-top: 6px;
+}
+.sim-port-stop.is-next strong {
+  color: #b2237d;
+}
+.sim-port-stop > span:last-child {
+  font-size: 10px;
+  color: #a0adb7;
+  margin-top: 3px;
+}
+.sim-port-stop small {
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  margin-left: 3px;
+}
+.simulation-footnote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: #98a5b0;
+  padding: 15px 3px 0;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.simulation-footnote > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.simulation-footnote > span:last-child {
+  color: #8d9ea9;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.simulation-error {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid #ebd4d9;
+  border-radius: 9px;
+  background: #fff3f6;
+  padding: 17px;
+  color: #9c5f73;
+  margin-bottom: 18px;
+}
+.simulation-error > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+.simulation-error strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+.simulation-error span {
+  font-size: 11px;
+}
+.simulation-error button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #e9cdd8;
+  border-radius: 5px;
+  padding: 8px 12px;
+  background: white;
+  color: #a24775;
+  font-size: 11px;
+}
+.simulation-loading {
+  display: flex;
+  min-height: 690px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 17px;
+  border-radius: 13px;
+  background: #0c2131;
+  color: #7892a7;
+  text-align: center;
+  padding: 30px;
+}
+.simulation-loading-icon {
+  display: grid;
+  place-items: center;
+  width: 98px;
+  height: 98px;
+  border: 1px solid #315065;
+  border-radius: 50%;
+  color: #c876ab;
+  box-shadow:
+    0 0 0 18px #152c3d,
+    0 0 0 19px #28465955;
+  margin-bottom: 29px;
+}
+.simulation-loading h2 {
+  color: #d4e3ed;
+  font-family: "Manrope", sans-serif;
+  font-weight: 550;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+.simulation-loading p {
+  color: #7490a5;
+  font-size: 12px;
+}
+.simulation-loading > svg {
+  margin-top: 9px;
+  color: #b35d95;
+}
+.scene-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  color: #9ab3c4;
+  font-size: 12px;
+  background: #0d2536;
+}
+@media (max-width: 1250px) {
+  .simulation-fleet {
+    width: 225px;
+  }
+  .simulation-instruments {
+    width: 240px;
+    padding: 16px;
+  }
+  .simulation-camera-controls > button {
+    padding: 9px;
+  }
+  .simulation-camera-controls > button > span {
+    display: none;
+  }
+  .sim-vessel-subtitle > span {
+    font-size: 10px;
+  }
+  .sim-position > span {
+    font-size: 10px;
+  }
+  .sim-itinerary-intro {
+    min-width: 205px;
+  }
+  .sim-itinerary-intro h2 > span {
+    display: block;
+    margin: 5px 0 0;
+  }
+}
+@media (max-width: 1020px) {
+  .simulation-main {
+    padding: 0 20px 23px;
+  }
+  .simulation-fleet {
+    left: 16px;
+    top: 16px;
+    width: 205px;
+  }
+  .simulation-instruments {
+    top: 16px;
+    right: 16px;
+    width: 220px;
+    padding: 15px;
+  }
+  .simulation-camera-controls {
+    top: 16px;
+  }
+  .sim-panel-heading {
+    padding: 16px 13px;
+  }
+  .sim-panel-heading > span {
+    font-size: 10px;
+  }
+  .simulation-fleet-item {
+    gap: 7px;
+    padding-right: 6px;
+    padding-left: 5px;
+  }
+  .sim-fleet-detail > strong {
+    font-size: 10px;
+  }
+  .sim-fleet-detail > span:not(.sim-fleet-progress) {
+    font-size: 10px;
+  }
+  .sim-fleet-percent {
+    font-size: 11px;
+  }
+  .sim-fleet-footer {
+    padding: 12px 13px;
+    font-size: 10px;
+  }
+  .sim-instrument-title .sim-label {
+    font-size: 10px;
+  }
+  .sim-synthetic-label {
+    font-size: 10px;
+  }
+  .simulation-instruments > h2 {
+    font-size: 15px;
+  }
+  .sim-main-instruments strong {
+    font-size: 29px;
+  }
+  .sim-main-instruments {
+    margin-top: 16px;
+  }
+  .sim-vessel-subtitle {
+    font-size: 10px;
+  }
+  .sim-vessel-subtitle > span {
+    font-size: 10px;
+  }
+  .sim-position {
+    gap: 4px;
+  }
+  .sim-position > span {
+    font-size: 10px;
+    gap: 4px;
+  }
+  .sim-timeline .sim-label > span {
+    display: none;
+  }
+  .simulation-playback {
+    left: 16px;
+    right: 16px;
+    padding: 16px;
+    gap: 17px;
+  }
+  .simulation-itinerary {
+    gap: 15px;
+  }
+  .simulation-footnote {
+    font-size: 10px;
+  }
+}
+@media (max-width: 780px) {
+  .header-inner .view-navigation {
+    gap: 14px;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  .view-navigation .nav-link + .nav-link {
+    display: flex;
+  }
+  .view-navigation .nav-link {
+    font-size: 10px;
+  }
+  .simulation-main {
+    padding: 0 17px 20px;
+  }
+  .simulation-heading {
+    padding: 22px 0 19px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .simulation-kicker {
+    font-size: 10px;
+    gap: 5px;
+    letter-spacing: 0.9px;
+  }
+  .simulation-kicker > span {
+    display: none;
+  }
+  .simulation-heading h1 {
+    font-size: 25px;
+    letter-spacing: -0.85px;
+    margin-top: 9px;
+  }
+  .simulation-heading p {
+    font-size: 10px;
+    line-height: 1.7;
+    max-width: 220px;
+  }
+  .simulation-disclosure {
+    margin-top: 3px;
+  }
+  .simulation-mode-badge {
+    font-size: 10px;
+    padding: 7px 8px;
+    gap: 6px;
+    letter-spacing: 0.6px;
+  }
+  .simulation-disclosure > span:last-child {
+    display: none;
+  }
+  .simulation-viewport {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .simulation-scene {
+    position: relative;
+    inset: auto;
+    height: 520px;
+    order: 2;
+  }
+  .simulation-fleet {
+    position: relative;
+    inset: auto;
+    order: 0;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ffffff0f;
+    border-radius: 0;
+    box-shadow: none;
+    background: #0c2131;
+  }
+  .sim-panel-heading {
+    padding: 14px 15px 10px;
+    border: 0;
+  }
+  .sim-panel-heading h2 {
+    font-size: 11px;
+  }
+  .sim-panel-heading > span {
+    font-size: 10px;
+  }
+  .simulation-fleet-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 6px;
+    padding: 0 10px 11px;
+  }
+  .simulation-fleet-item {
+    margin: 0 !important;
+    padding: 11px 8px;
+    gap: 7px;
+  }
+  .simulation-fleet-item.is-selected::before {
+    display: none;
+  }
+  .sim-fleet-index {
+    display: none;
+  }
+  .sim-fleet-detail > strong {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .sim-fleet-detail > span:not(.sim-fleet-progress) {
+    font-size: 10px;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .sim-fleet-percent {
+    font-size: 11px;
+  }
+  .sim-fleet-progress {
+    margin-top: 7px;
+  }
+  .sim-fleet-footer {
+    display: none;
+  }
+  .simulation-camera-controls {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    order: 1;
+    justify-content: center;
+    background: #0b1f2e;
+    padding: 7px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #ffffff0e;
+  }
+  .simulation-camera-controls > button {
+    padding: 8px 10px;
+    font-size: 10px;
+    gap: 5px;
+  }
+  .simulation-camera-controls > button > span {
+    display: inline;
+  }
+  .simulation-camera-controls > button svg {
+    width: 13px;
+    height: 13px;
+  }
+  .simulation-instruments {
+    position: relative;
+    inset: auto;
+    order: 3;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    background: #0c2131;
+    box-shadow: none;
+    padding: 20px 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 17px;
+  }
+  .sim-instrument-title {
+    grid-column: 1/-1;
+  }
+  .sim-instrument-title .sim-label {
+    font-size: 10px;
+  }
+  .sim-synthetic-label {
+    font-size: 10px;
+  }
+  .simulation-instruments > h2 {
+    grid-column: 1/-1;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .sim-vessel-subtitle {
+    grid-column: 1/-1;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .sim-vessel-subtitle > span {
+    font-size: 10px;
+  }
+  .sim-main-instruments {
+    grid-column: 1/-1;
+    margin-top: 17px;
+    padding-top: 15px;
+    padding-bottom: 11px;
+  }
+  .sim-main-instruments strong {
+    font-size: 29px;
+  }
+  .sim-main-instruments > div + div {
+    padding-left: 25px;
+  }
+  .sim-position {
+    grid-column: 1/-1;
+    margin-top: 12px;
+  }
+  .sim-position > span {
+    font-size: 10px;
+    gap: 6px;
+  }
+  .sim-next-stop {
+    margin-top: 18px;
+    padding-right: 4px;
+  }
+  .sim-next-stop .sim-label {
+    font-size: 10px;
+  }
+  .sim-next-stop > strong {
+    font-size: 12px;
+    gap: 5px;
+    margin-top: 7px;
+  }
+  .sim-next-stop > strong > svg:first-child {
+    width: 13px;
+  }
+  .sim-next-stop > strong > svg:last-child {
+    display: none;
+  }
+  .sim-next-stop > span:last-child {
+    font-size: 10px;
+    margin-left: 0;
+    line-height: 1.5;
+  }
+  .sim-voyage-progress {
+    margin-top: 18px;
+    padding-top: 0;
+    border: 0;
+  }
+  .sim-voyage-progress .sim-label {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .sim-voyage-progress strong {
+    font-size: 10px;
+  }
+  .sim-voyage-progress > span:last-child {
+    font-size: 10px;
+  }
+  .simulation-scene-caption {
+    top: 692px;
+    bottom: auto;
+    left: 15px;
+    gap: 6px;
+  }
+  .simulation-scene-caption > span:first-child {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+  .simulation-scene-caption > span:last-child {
+    display: none;
+  }
+  .simulation-routes-toggle {
+    top: 683px;
+    right: 15px;
+    bottom: auto;
+    font-size: 10px;
+    padding: 8px 9px;
+    gap: 5px;
+  }
+  .simulation-routes-toggle > svg {
+    width: 13px;
+  }
+  .simulation-playback {
+    position: relative;
+    inset: auto;
+    order: 4;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid #ffffff0d;
+    background: #081b2a;
+    box-shadow: none;
+    padding: 18px 16px 21px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .sim-playback-buttons {
+    gap: 8px;
+  }
+  .sim-play-button {
+    width: 36px;
+    height: 36px;
+  }
+  .sim-restart-button {
+    width: 26px;
+  }
+  .sim-speed-selector {
+    border: 0;
+    padding: 0;
+    min-width: 85px;
+    margin-left: auto;
+    order: 1;
+  }
+  .sim-speed-selector > label {
+    font-size: 10px;
+  }
+  .sim-speed-selector select {
+    font-size: 11px;
+  }
+  .sim-timeline {
+    order: 2;
+    width: 100%;
+    flex: 0 0 100%;
+    margin-top: 5px;
+  }
+  .sim-timeline .sim-label {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .sim-timeline > div > span:last-child {
+    font-size: 10px;
+  }
+  .sim-timeline input[type="range"] {
+    height: 5px;
+    margin-top: 14px;
+  }
+  .sim-timeline input[type="range"]::-webkit-slider-thumb {
+    height: 12px;
+    width: 12px;
+  }
+  .simulation-itinerary {
+    display: block;
+    padding: 23px 0 19px;
+  }
+  .sim-itinerary-intro h2 {
+    font-size: 12px;
+  }
+  .sim-itinerary-intro h2 > span {
+    display: inline;
+    margin-left: 5px;
+    font-size: 10px;
+  }
+  .sim-itinerary-intro p {
+    font-size: 10px;
+  }
+  .sim-port-stops {
+    gap: 5px;
+    margin-top: 22px;
+  }
+  .sim-port-stop {
+    min-width: 0;
+    flex: 1;
+  }
+  .sim-port-stop strong {
+    font-size: 10px;
+  }
+  .sim-port-stop > span:last-child {
+    font-size: 10px;
+  }
+  .sim-port-stop small {
+    display: none;
+  }
+  .simulation-footnote {
+    padding-top: 14px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 10px;
+  }
+  .simulation-footnote > span {
+    align-items: flex-start;
+    line-height: 1.7;
+  }
+  .simulation-footnote > span > svg {
+    margin-top: 2px;
+  }
+  .simulation-footnote > span:last-child {
+    font-size: 10px;
+  }
+  .simulation-loading {
+    min-height: 560px;
+  }
+  .simulation-loading h2 {
+    font-size: 20px;
+  }
+  .simulation-error {
+    flex-wrap: wrap;
+    padding: 14px;
+  }
+  .simulation-error > div {
+    min-width: 220px;
+  }
+  .simulation-error button {
+    margin-left: 34px;
+  }
+}
+@media (max-width: 430px) {
+  .header-inner .view-navigation {
+    gap: 11px;
+    margin-right: 10px;
+  }
+  .view-navigation .nav-link {
+    font-size: 10px;
+  }
+  .brand-title {
+    display: none;
+  }
+  .brand-divider {
+    display: none;
+  }
+  .brand {
+    margin-right: 12px;
+  }
+  .simulation-heading h1 {
+    font-size: 23px;
+  }
+  .simulation-main {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .simulation-heading {
+    gap: 9px;
+  }
+  .simulation-heading p {
+    font-size: 10px;
+    max-width: 205px;
+  }
+  .sim-fleet-percent {
+    font-size: 10px;
+  }
+  .simulation-fleet-item {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  .sim-fleet-detail > strong {
+    font-size: 10px;
+  }
+  .simulation-camera-controls > button {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .simulation-dashboard * {
+    transition: none !important;
+  }
+}
